@@ -48,10 +48,10 @@ if generate_data:
     months=['jan','Feb','Apr','May','June','July','August','Sep','Oct','Nov','Dec']
     df=pd.DataFrame({
         "Month": months,
-        "Sales": np.random.randint(min_sales,max_sales+1,12),
-        "Profit":np.random.randint(min_profit,max_profit+1,12),
-           "Orders":np.random.randint(100,1000,12),
-              "Customers": np.random.randint(50,500,12)   })
+        "Sales": np.random.randint(min_sales,max_sales+1,size=12),
+        "Profit":np.random.randint(min_profit,max_profit+1,size=12),
+           "Orders":np.random.randint(100,1000,size=12),
+              "Customers": np.random.randint(50,500,size=12)   })
 
     df['Profit_Margin']=(df['Profit']/df['Sales'])*100
 
