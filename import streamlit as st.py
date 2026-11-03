@@ -63,13 +63,13 @@ if generate_data:
     st.write(round(df['Sales'].mean(),2))
 
     st.write("Average Profit")
-    st.write(round(df['Profit'].mean(),2)
+    st.write(round(df['Profit'].mean(),2))
     
     st.write("Total Sales")
-    st.write(round(df['Sales'].sum(),2)               
+    st.write(round(df['Sales'].sum(),2))              
 
     st.write("Total Profit")
-    st.write(round(df['Sales'].sum(),2)
+    st.write(round(df['Sales'].sum(),2))
 
     st.write("SUMMARY STATISTICS")
     st.write(df.describe())
@@ -83,12 +83,12 @@ if generate_data:
     set.pyplot(fig)
 
     st.subheader("Profit_Histogram")
-    fig,ax=plt.subsplots()
-        ax.hist(df['Profit'],
+    fig,ax=plt.subsplots(),
+    ax.hist(df['Profit'],
                 bins=10)
     
-        ax.set_title("Profit Distribution")
-        set.pyplot(fig)
+    ax.set_title("Profit Distribution")
+    set.pyplot(fig)
 
     st.subheader("Month Sales Trend")
 
@@ -102,7 +102,7 @@ if generate_data:
     st.pyplot(fig)
 
     st.subheader("Correlation Heatmap")   
-    )
+    
     fig,ax=plt.subplots(figsize=(8,5))
     sns.heatmap(
         df.select_dtypes(including=np.number).corr(),
@@ -117,12 +117,10 @@ if generate_data:
         x='Month',
         y=['Sales','Profit'],
         markers=True,
-        title='Sales and Profit Trend'
+        title='Sales and Profit Trend')
 
     st.plotly_chart(
         fig,use_container_width=True)
-    else:
-        st.info("Select inputs from the Sidebars and Click Generate Dataset")
-    )
-    )
-    )
+else:
+    st.info("Select inputs from the Sidebars and Click Generate Dataset")
+    
